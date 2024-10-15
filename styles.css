@@ -1,0 +1,310 @@
+/* 
+24. Your Product Landing Page should use at least one media query.
+25. Your Product Landing Page should use CSS Flexbox at least once.
+*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* 
+black #000000
+light-grey #696969
+dark-grey #A9a9a9
+light-red #B22222
+dark-red #Bc8f8f */
+
+#header {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 25px;
+  background-color: #B22222;
+  color: #ffe13f;
+  position: sticky;
+  top: 0;
+}
+
+#header>img {
+  width: 100px;
+  padding: 5px 0;
+}
+
+.hidden {
+  display: none;
+  /* Menyembunyikan checkbox */
+}
+
+.toggle-btn {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#nav-bar {
+  width: auto;
+  align-content: center;
+  /* border: 1px solid red; */
+  display: flex;
+}
+
+#nav-bar>ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  /* height: 100%; */
+  /* border: 1px solid blue; */
+  height: 100%;
+  /* line-height: inherit; */
+}
+
+#nav-bar>ul>li {
+  /* border: 1px solid red; */
+  list-style: none;
+}
+
+#nav-bar>ul>li>a {
+  color: black;
+  text-decoration: none;
+  color: #ffe13f;
+}
+
+#nav-bar>ul>li>a>div {
+  padding: 10px;
+  height: 100%;
+  /* border: 1px solid red; */
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  border: 2px solid transparent;
+  /* border-radius: 15px; */
+  transition: 0.25s;
+}
+
+#nav-bar>ul>li>a>div.registration {
+  border: 2px solid #ffe13f;
+  border-radius: 15px;
+  transition: 0.5s;
+}
+
+#nav-bar>ul>li>a>div:hover {
+  border: 2px solid transparent;
+  color: #900000;
+  background-color: #ffe13f;
+  border-radius: unset;
+}
+
+/* Menampilkan navbar ketika checkbox dicentang */
+#toggle:checked+.toggle-btn {
+  background-color: #3e8e41;
+  /* Warna tombol saat diklik */
+}
+
+#toggle:checked~#nav-bar {
+  display: block;
+  /* Menampilkan navbar saat dicentang */
+}
+
+main {
+  width: 100%;
+  /* background-color: #B22222; */
+}
+
+main>header {
+  background: url('https://images.pexels.com/photos/3321791/pexels-photo-3321791.jpeg') no-repeat center center/cover;
+  height: 60vh;
+  color: white;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0px;
+  place-items: center;
+  place-content: center;
+}
+
+main>section {
+  margin: auto;
+  padding: 0 20%;
+  /* border: 2px solid #B22222; */
+}
+
+main>header>h1,
+main>header>p {
+  /* border: 2px solid #B22222; */
+  margin: 5px;
+  color: #ffe13f;
+}
+
+main>header>h1 {
+  border-top: 2px solid #B22222;
+  border-bottom: 2px solid #B22222;
+}
+
+h2 {
+  border-top: 2px solid #B22222;
+  border-bottom: 2px solid #B22222;
+  display: inline-block;
+  /* padding: 5px; */
+  background-color: transparent;
+  box-shadow: 5px 2.5px 0 #B22222;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  align-content: space-around;
+  /* background-color: #B22222; */
+  /* color: #ffe13f; */
+}
+
+#form>* {
+  margin: 10px;
+}
+
+/* #696969
+#A9a9a9
+#Bc8f8f
+#ddcf1d */
+
+label>input {
+  width: 500px;
+  /* height: 40px; */
+  padding: 10px;
+  background-color: #ffe23fcb;
+  border: none;
+  border-left: 2px solid #B22222;
+  /* border-bottom: 2px solid #B22222; */
+  border-right: 2px solid #B22222;
+  /* border-bottom-left-radius: 10px; */
+}
+
+#submit {
+  font-weight: bold;
+  padding: 10px 20px;
+  background-color: transparent;
+  /* border: none; */
+  background-color: #B22222;
+  color: whitesmoke;
+  border: 2px solid #B22222;
+  /* border-bottom: 2px solid #ffe13f; */
+  border-radius: 10px;
+  transition: 0.25s;
+}
+
+#submit:hover {
+  background-color: #ffe13f;
+  /* border: none; */
+  color: #900000;
+  border: 2px solid #B22222;
+}
+
+#documentation>div {
+  display: flex;
+  /* Menggunakan Flexbox */
+  justify-content: center;
+  /* Memusatkan secara horizontal */
+  align-items: center;
+  /* Memusatkan secara vertikal */
+  height: 100%;
+  /* Mengisi tinggi viewport */
+}
+
+iframe {
+  width: 560px;
+  height: 315px;
+  border: none;
+  /* margin: auto 50%; */
+  /* transform: translateX(-50%); */
+}
+
+#ne-cont {
+  display: flex;
+  flex-wrap: wrap;
+  /* border: 1px solid #900000; */
+  justify-content: space-evenly;
+}
+
+#ne-cont>div {
+  width: 250px;
+  margin: 10px 5px;
+  padding: 0 5px;
+  color: #ffe13f;
+  background-color: #B22222;
+  /* border: 1px solid #900000; */
+  text-align: center;
+}
+
+#ne-cont p {
+  color: whitesmoke;
+}
+
+#ne-cont>div>img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+footer {
+  width: 100%;
+  padding: 10px 25px;
+  margin: 25px 0 0;
+  background-color: #B22222;
+  color: #ffe13f;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  /* align-content: space-around; */
+}
+
+footer>ul {
+  display: flex;
+  /* align-items: end; */
+  /* align-content: end; */
+  /* justify-content: space-evenly; */
+  /* justify-items: end; */
+  list-style: none;
+  /* border: 1px solid #900000; */
+  margin: 5px 0;
+}
+
+footer>ul>li {
+  margin: 0 10px;
+}
+
+footer>ul>li>a {
+  text-decoration: none;
+  color: #ffe13f;
+}
+
+footer>ul>li>a:hover {
+  text-decoration: underline;
+}
+
+footer p {
+  /* border: 1px solid #900000; */
+  color: rgba(245, 245, 245, 0.5);
+  margin: 5px 0;
+  text-align: right;
+}
+
+footer a {
+  color: rgba(245, 245, 245, 0.5);
+  margin: 5px 0;
+}
+
+@media screen and (max-width:800px) {
+  label>input {
+    width: 250px;
+  }
+}
